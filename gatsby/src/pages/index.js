@@ -1,6 +1,6 @@
 import React from 'react'
 import Styled from 'styled-components'
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 
 const HomePageStyles = Styled.div`
