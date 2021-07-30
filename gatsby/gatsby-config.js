@@ -9,6 +9,14 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: 'uwmh9loj',
+        dataset: "production",
+        watchMode: true,
+        token: process.env.GATSBY_SANITY_TOKEN,
+      },
+    },
   ],
 }

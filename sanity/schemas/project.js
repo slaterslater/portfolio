@@ -10,9 +10,32 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      title: 'Summary',
+      name: 'summary',
+      type: 'string',
+      description: 'one-line summary of project'
+    },
+    {
       title: 'About',
       type: 'markdown',
       name: 'about'
+    },
+    {
+      title: 'Deploy URL',
+      type: 'url',
+      name: 'deploy',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'Repository',
+      type: 'url',
+      name: 'repo',
+    },
+    {
+      title: 'Skills',
+      name: 'skills',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'skill' }] }],
     },
     // {
     //   title: 'Image',
