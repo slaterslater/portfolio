@@ -9,5 +9,10 @@ export default {
       type: 'string',
       validation: Rule => Rule.required()
     },
+    {
+      title: 'Description',
+      type: 'markdown',
+      name: 'description'
+    },
   ]
 }
