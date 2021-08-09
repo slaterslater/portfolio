@@ -67,7 +67,7 @@ export default {
       title: 'Date',
       name: 'date_desc',
       by: [
-        {field: 'date', direction: 'asc'},
+        {field: 'date', direction: 'desc'},
       ]
     },
   ]
