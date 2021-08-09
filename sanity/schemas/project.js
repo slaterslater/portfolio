@@ -61,5 +61,14 @@ export default {
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'skill' }] }],
     },
+  ],
+  orderings: [
+    {
+      title: 'Date',
+      name: 'date_desc',
+      by: [
+        {field: 'date', direction: 'asc'},
+      ]
+    },
   ]
 }
