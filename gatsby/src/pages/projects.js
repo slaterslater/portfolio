@@ -1,7 +1,7 @@
-import React from 'react'
+// import React from 'react'
 
-const ProjectsPage = () => {
-  return (
-    <p>PROJECTS</p>
-  )
-}
+// const ProjectsPage = () => {
+//   return (
+//     <p>PROJECTS</p>
+//   )
+// }
