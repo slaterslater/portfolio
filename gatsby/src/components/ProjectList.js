@@ -1,15 +1,15 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import { GatsbyImage as Img } from 'gatsby-plugin-image'
-import styled from 'styled-components'
+import { Link } from "gatsby"
+import React from "react"
+import { GatsbyImage as Img } from "gatsby-plugin-image"
+import styled from "styled-components"
 
 const ProjectListStyles = styled.ul`
   list-style-type: none;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   li {
-    margin:20px 0;
-    padding:10px;
+    margin: 20px 0;
+    padding: 10px;
     border-radius: 8px;
     transition: 0.5s;
     :hover {
@@ -34,17 +34,19 @@ const InfoStyles = styled.div`
     margin-top: 0;
   }
   p {
-
   }
 `
 
-const ProjectList = ({projects}) => {
+const ProjectList = ({ projects }) => {
   return (
     <ProjectListStyles>
       {projects.map(project => (
         <li key={project.id}>
           <Link to={`/${project.slug.current}`}>
-              <Img image={project.image.asset.gatsbyImageData} alt={project.name} />  
+            <Img
+              image={project.image.asset.gatsbyImageData}
+              alt={project.name}
+            />
             <InfoStyles>
               <h2>{project.name}</h2>
               <p>{project.summary}</p>

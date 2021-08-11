@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
 const FooterStyles = styled.footer`
   text-align: center;
-  margin-top:auto;
-`;
+  margin-top: auto;
+`
 
 const Footer = () => {
   const year = new Date().getFullYear()

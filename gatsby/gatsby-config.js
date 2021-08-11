@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: 'uwmh9loj',
+        projectId: "uwmh9loj",
         dataset: "production",
         watchMode: true,
         token: process.env.GATSBY_SANITY_TOKEN,

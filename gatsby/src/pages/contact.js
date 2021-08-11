@@ -1,8 +1,6 @@
 // import React from 'react'
 // import useForm from '../utils/useForm'
 
-
-
 // const ContactPage = () => {
 //   const { values, updateValue } = useForm({
 //     name: '',
@@ -12,10 +10,9 @@
 //   const sendMail = async e => {
 //     e.preventDefault()
 //     // const res = await fetch('/.netlify/functions/sendMail')
-  
+
 //     console.log({values})
 //   }
-
 
 //   return (
 //     <>

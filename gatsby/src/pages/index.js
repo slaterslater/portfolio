@@ -1,14 +1,14 @@
-import { graphql } from 'gatsby';
-import React from 'react'
-import Styled from 'styled-components'
-import ProjectList from '../components/ProjectList';
+import { graphql } from "gatsby"
+import React from "react"
+import styled from "styled-components"
+import ProjectList from "../components/ProjectList"
 
-const HomePageStyles = Styled.div`
+const HomePageStyles = styled.div`
 
-`;
+`
 
-const HomePage = ({data}) => {
-  const projects = data.projects.nodes;
+const HomePage = ({ data }) => {
+  const projects = data.projects.nodes
   return (
     <HomePageStyles>
       <p>this is going to be my portfolio of {projects.length} things...</p>
@@ -21,7 +21,7 @@ export default HomePage
 
 export const query = graphql`
   query {
-    projects: allSanityProject (sort: {order: DESC, fields: date}) {
+    projects: allSanityProject(sort: { order: DESC, fields: date }) {
       nodes {
         id
         name
@@ -41,4 +41,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
