@@ -68,7 +68,6 @@ const ProjectNavStyles = styled.nav`
 `
 
 const SingleProjectPage = ({ data: { project } }) => {
-  console.log(project)
   return (
     <ProjectPageStyles>
       <div>
