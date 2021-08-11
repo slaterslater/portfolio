@@ -9,7 +9,7 @@ const HomePage = ({ data }) => {
   const projects = data.projects.nodes
   return (
     <HomePageStyles>
-      <p>Take a look at some of the projects I've developed</p>
+      <p>My name is Anthony and these are some of the projects I've developed</p>
       <ProjectList projects={projects} />
     </HomePageStyles>
   )
