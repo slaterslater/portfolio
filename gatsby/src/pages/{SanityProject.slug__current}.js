@@ -2,7 +2,11 @@ import { graphql, Link } from "gatsby"
 import React from "react"
 import { GatsbyImage as Img } from "gatsby-plugin-image"
 import ReactMarkdown from "react-markdown"
-import { FaGithub as Github, FaHome as Home, FaGlobeAmericas as Globe } from 'react-icons/fa';
+import {
+  FaGithub as Github,
+  FaHome as Home,
+  FaGlobeAmericas as Globe,
+} from "react-icons/fa"
 import styled from "styled-components"
 
 const ProjectPageStyles = styled.div`
@@ -25,7 +29,7 @@ const ProjectPageStyles = styled.div`
   img {
     border-radius: 8px;
   }
-  @media (max-width: 700px){
+  @media (max-width: 700px) {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 20px;
@@ -35,7 +39,7 @@ const ProjectPageStyles = styled.div`
     p {
       padding-right: 10px;
     }
-  }  
+  }
 `
 
 const ProjectNavStyles = styled.nav`
@@ -59,6 +63,7 @@ const ProjectNavStyles = styled.nav`
   }
   svg {
     vertical-align: top;
+    padding-right: 6px;
   }
 `
 
@@ -67,7 +72,9 @@ const SingleProjectPage = ({ data: { project } }) => {
   return (
     <ProjectPageStyles>
       <div>
-        <Link to={project.deploy}><h2>{project.name}</h2></Link>
+        <Link to={project.deploy}>
+          <h2>{project.name}</h2>
+        </Link>
         <ReactMarkdown children={project.about} />
         <h3>Skills Used</h3>
         <ul>
@@ -78,21 +85,30 @@ const SingleProjectPage = ({ data: { project } }) => {
       </div>
       <div>
         <Link to={project.deploy}>
-        <Img
-          image={project.image.asset.gatsbyImageData}
-          alt={`${project.name} screenshot`}
-        />
+          <Img
+            image={project.image.asset.gatsbyImageData}
+            alt={`${project.name} screenshot`}
+          />
         </Link>
         <ProjectNavStyles>
           <ul>
             <li>
-              <Link to={project.repo}><Github/> Code</Link>
+              <Link to={project.repo}>
+                <Github />
+                Code
+              </Link>
             </li>
             <li>
-              <Link to={project.deploy}><Globe /> Website</Link>
+              <Link to={project.deploy}>
+                <Globe />
+                Website
+              </Link>
             </li>
             <li>
-              <Link to={"/"}><Home /> Home</Link>
+              <Link to={"/"}>
+                <Home />
+                Home
+              </Link>
             </li>
           </ul>
         </ProjectNavStyles>

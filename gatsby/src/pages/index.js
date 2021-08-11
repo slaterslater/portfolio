@@ -3,15 +3,13 @@ import React from "react"
 import styled from "styled-components"
 import ProjectList from "../components/ProjectList"
 
-const HomePageStyles = styled.div`
-
-`
+const HomePageStyles = styled.div``
 
 const HomePage = ({ data }) => {
   const projects = data.projects.nodes
   return (
     <HomePageStyles>
-      <p>this is going to be my portfolio of {projects.length} things...</p>
+      <p>Take a look at some of the projects I've developed</p>
       <ProjectList projects={projects} />
     </HomePageStyles>
   )
