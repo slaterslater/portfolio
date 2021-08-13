@@ -13,7 +13,8 @@ const ProjectListStyles = styled.ul`
     border-radius: 8px;
     transition: 0.5s;
     :hover {
-      box-shadow: 5px 5px 10px 2px #888888;
+      background-color: var(--litegrey);
+      box-shadow: 5px 5px 10px 2px var(--darkgrey);
     }
   }
   a {

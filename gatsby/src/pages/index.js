@@ -11,7 +11,6 @@ const HomePage = ({ data }) => {
   const projects = data.projects.nodes
   return (
     <HomePageStyles>
-      <p>I'm Anthony and these are some of the projects I've developed</p>
       <ProjectList projects={projects} />
     </HomePageStyles>
   )
