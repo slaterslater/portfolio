@@ -13,7 +13,7 @@ const ProjectListStyles = styled.ul`
     border-radius: 8px;
     transition: 0.5s;
     :hover {
-      background-color: var(--litegrey);
+      background-color: var(--beige);
       box-shadow: 5px 5px 10px 2px var(--darkgrey);
     }
   }
@@ -32,9 +32,7 @@ const ProjectListStyles = styled.ul`
 const InfoStyles = styled.div`
   padding: 0 15px;
   h2 {
-    margin-top: 0;
-  }
-  p {
+    margin-top: 5px;
   }
 `
 
