@@ -7,14 +7,16 @@ const HeaderStyles = styled.header`
   border-bottom: 1px solid var(--darkgrey);
   a {
     text-decoration: none;
-    color: black
+    color: black;
   }
 `
 
 const Header = () => {
   return (
     <HeaderStyles>
-      <h1><Link to={'/'}>slaterslater</Link></h1>
+      <h1>
+        <Link to={"/"}>slaterslater</Link>
+      </h1>
     </HeaderStyles>
   )
 }
