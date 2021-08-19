@@ -4,7 +4,7 @@ import { GatsbyImage as Img } from "gatsby-plugin-image"
 import ReactMarkdown from "react-markdown"
 import {
   FaGithub as Github,
-  FaHome as Home,
+  FaBackward as Back,
   FaGlobeAmericas as Globe,
 } from "react-icons/fa"
 import styled from "styled-components"
@@ -16,12 +16,14 @@ const ProjectPageStyles = styled.div`
     text-decoration: none;
     color: black;
   }
+  h2 {
+    margin-top: 0;
+  }
   h3 {
-    margin-left: 10px;
     margin-top: 30px;
   }
   p {
-    padding: 0 35px 0 10px;
+    padding-right: 35px;
     text-align: justify;
   }
   .gatsby-image-wrapper {
@@ -33,7 +35,6 @@ const ProjectPageStyles = styled.div`
   @media (max-width: 700px) {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 20px;
     h2 {
       text-align: center;
     }
@@ -95,6 +96,12 @@ const SingleProjectPage = ({ data: { project } }) => {
           <ProjectNavStyles>
             <ul>
               <li>
+                <Link to={"/"}>
+                  <Back />
+                  Back
+                </Link>
+              </li>
+              <li>
                 <Link to={project.repo}>
                   <Github />
                   Code
@@ -104,12 +111,6 @@ const SingleProjectPage = ({ data: { project } }) => {
                 <Link to={project.deploy}>
                   <Globe />
                   Website
-                </Link>
-              </li>
-              <li>
-                <Link to={"/"}>
-                  <Home />
-                  Home
                 </Link>
               </li>
             </ul>

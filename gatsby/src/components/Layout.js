@@ -28,21 +28,20 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
-// do i need this? can it be placed above?
 const PageStyles = styled.div`
-  /* width:100%; */
   max-width: 800px;
   margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 10px;
 `
 
 const ContentStyles = styled.div`
   max-width: 880px;
-  min-width: 350px;
+  min-width: 320px;
   margin: 0 auto;
+  padding: 10px;
 `
 
 const Layout = ({ children }) => {
