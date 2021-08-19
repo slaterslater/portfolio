@@ -1,8 +1,8 @@
 import React from "react"
-import styled, { createGlobalStyle } from "styled-components"
-import "normalize.css"
 import "@fontsource/anton"
 import "@fontsource/lato"
+import "normalize.css"
+import styled, { createGlobalStyle } from "styled-components"
 import Footer from "./Footer"
 import Header from "./Header"
 
@@ -18,23 +18,23 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     min-width:100%;
     width:100%;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
     height: 100%;
     background-color: var(--offwhite);
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Anton', sans-serif;
   }
 `
 
 const PageStyles = styled.div`
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   max-width: 800px;
   margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: column;
   padding: 10px;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Anton', sans-serif;
+  }
 `
 
 const ContentStyles = styled.div`
