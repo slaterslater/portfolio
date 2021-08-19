@@ -8,6 +8,7 @@ import {
   FaGlobeAmericas as Globe,
 } from "react-icons/fa"
 import styled from "styled-components"
+import SEO from "../components/SEO"
 
 const ProjectPageStyles = styled.div`
   display: flex;
@@ -69,50 +70,53 @@ const ProjectNavStyles = styled.nav`
 
 const SingleProjectPage = ({ data: { project } }) => {
   return (
-    <ProjectPageStyles>
-      <div>
-        <Link to={project.deploy}>
-          <h2>{project.name}</h2>
-        </Link>
-        <ReactMarkdown children={project.about} />
-        <h3>Skills Used</h3>
-        <ul>
-          {project.skills.map(skill => (
-            <li key={skill.id}>{skill.name}</li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <Link to={project.deploy}>
-          <Img
-            image={project.image.asset.gatsbyImageData}
-            alt={`${project.name} screenshot`}
-          />
-        </Link>
-        <ProjectNavStyles>
+    <>
+      <SEO title={project.name} />
+      <ProjectPageStyles>
+        <div>
+          <Link to={project.deploy}>
+            <h2>{project.name}</h2>
+          </Link>
+          <ReactMarkdown children={project.about} />
+          <h3>Skills Used</h3>
           <ul>
-            <li>
-              <Link to={project.repo}>
-                <Github />
-                Code
-              </Link>
-            </li>
-            <li>
-              <Link to={project.deploy}>
-                <Globe />
-                Website
-              </Link>
-            </li>
-            <li>
-              <Link to={"/"}>
-                <Home />
-                Home
-              </Link>
-            </li>
+            {project.skills.map(skill => (
+              <li key={skill.id}>{skill.name}</li>
+            ))}
           </ul>
-        </ProjectNavStyles>
-      </div>
-    </ProjectPageStyles>
+        </div>
+        <div>
+          <Link to={project.deploy}>
+            <Img
+              image={project.image.asset.gatsbyImageData}
+              alt={`${project.name} screenshot`}
+            />
+          </Link>
+          <ProjectNavStyles>
+            <ul>
+              <li>
+                <Link to={project.repo}>
+                  <Github />
+                  Code
+                </Link>
+              </li>
+              <li>
+                <Link to={project.deploy}>
+                  <Globe />
+                  Website
+                </Link>
+              </li>
+              <li>
+                <Link to={"/"}>
+                  <Home />
+                  Home
+                </Link>
+              </li>
+            </ul>
+          </ProjectNavStyles>
+        </div>
+      </ProjectPageStyles>
+    </>
   )
 }
 

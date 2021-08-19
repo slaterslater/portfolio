@@ -44,7 +44,7 @@ const ProjectList = ({ projects }) => {
           <Link to={`/${project.slug.current}`}>
             <Img
               image={project.image.asset.gatsbyImageData}
-              alt={project.name}
+              alt={`screenshot of ${project.name}`}
             />
             <InfoStyles>
               <h2>{project.name}</h2>

@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import ProjectList from "../components/ProjectList"
+import SEO from "../components/SEO"
 
 const HomePageStyles = styled.div`
   padding: 8px;
@@ -10,9 +11,12 @@ const HomePageStyles = styled.div`
 const HomePage = ({ data }) => {
   const projects = data.projects.nodes
   return (
-    <HomePageStyles>
-      <ProjectList projects={projects} />
-    </HomePageStyles>
+    <>
+      <SEO />
+      <HomePageStyles>
+        <ProjectList projects={projects} />
+      </HomePageStyles>
+    </>
   )
 }
 

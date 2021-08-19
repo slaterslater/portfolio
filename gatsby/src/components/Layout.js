@@ -40,11 +40,8 @@ const PageStyles = styled.div`
 `
 
 const ContentStyles = styled.div`
-  /* justify-content: center; */
   max-width: 880px;
   min-width: 350px;
-  /* border: 1px solid black; */
-  /* align-items: center; */
   margin: 0 auto;
 `
 
