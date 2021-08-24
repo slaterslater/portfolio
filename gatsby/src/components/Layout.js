@@ -1,7 +1,7 @@
+import "normalize.css"
 import React from "react"
 import "@fontsource/anton"
 import "@fontsource/lato"
-import "normalize.css"
 import styled, { createGlobalStyle } from "styled-components"
 import Footer from "./Footer"
 import Header from "./Header"
