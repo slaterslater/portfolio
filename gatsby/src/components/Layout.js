@@ -1,7 +1,5 @@
 import "normalize.css"
 import React from "react"
-import "@fontsource/anton"
-import "@fontsource/lato"
 import styled, { createGlobalStyle } from "styled-components"
 import Footer from "./Footer"
 import Header from "./Header"
@@ -21,7 +19,6 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     background-color: var(--offwhite);
     font-family: "Lato", sans-serif;
-    font-weight: 300;
   }
   h1, h2, h3 {
     font-family: "Anton", sans-serif;
@@ -34,8 +31,7 @@ const PageStyles = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  
+  padding: 0 10px;
 `
 
 const ContentStyles = styled.div`

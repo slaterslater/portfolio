@@ -94,7 +94,7 @@ const SingleProjectPage = ({ data: { project } }) => {
         <div>
           <a
             href={project.deploy}
-            title={`go to ${project.name} deployed website`}
+            title={`go to deployed ${project.name}`}
           >
             <Img
               image={project.image.asset.gatsbyImageData}
@@ -118,7 +118,7 @@ const SingleProjectPage = ({ data: { project } }) => {
               <li>
                 <a
                   href={project.deploy}
-                  title={`go to ${project.name} deployed website`}
+                  title={`go to deployed ${project.name}`}
                 >
                   <Globe />
                   Website
