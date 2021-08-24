@@ -48,12 +48,17 @@ const ProjectNavStyles = styled.nav`
   ul {
     list-style-type: none;
     display: flex;
+    justify-content: space-between;
     padding: 15px 0;
     width: 300px;
-    justify-content: space-evenly;
+  }
+  li {
+    display: flex;
   }
   a {
+    min-width: 80px;
     padding: 8px 5px;
+    text-align: center;
     text-decoration: none;
     border: 1px solid black;
     color: black;
@@ -75,9 +80,9 @@ const SingleProjectPage = ({ data: { project } }) => {
       <SEO title={project.name} />
       <ProjectPageStyles>
         <div>
-          <Link to={project.deploy}>
+          <a href={project.deploy}>
             <h2>{project.name}</h2>
-          </Link>
+          </a>
           <ReactMarkdown children={project.about} />
           <h3>Skills Used</h3>
           <ul>
@@ -87,31 +92,37 @@ const SingleProjectPage = ({ data: { project } }) => {
           </ul>
         </div>
         <div>
-          <Link to={project.deploy}>
+          <a
+            href={project.deploy}
+            title={`go to ${project.name} deployed website`}
+          >
             <Img
               image={project.image.asset.gatsbyImageData}
               alt={`${project.name} screenshot`}
             />
-          </Link>
+          </a>
           <ProjectNavStyles>
             <ul>
               <li>
-                <Link to={"/"}>
+                <Link to={"/"} title="return to slaterslater hompage">
                   <Back />
                   Back
                 </Link>
               </li>
               <li>
-                <Link to={project.repo}>
+                <a href={project.repo} title={`view ${project.name} code repo`}>
                   <Github />
                   Code
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to={project.deploy}>
+                <a
+                  href={project.deploy}
+                  title={`go to ${project.name} deployed website`}
+                >
                   <Globe />
                   Website
-                </Link>
+                </a>
               </li>
             </ul>
           </ProjectNavStyles>

@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
 `
 
 const PageStyles = styled.div`
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   max-width: 800px;
   margin: 0 auto;
@@ -32,8 +32,8 @@ const PageStyles = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Anton', sans-serif;
+  h1, h2, h3 {
+    font-family: "Anton", sans-serif;
   }
 `
 
