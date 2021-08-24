@@ -20,21 +20,22 @@ const GlobalStyles = createGlobalStyle`
     width:100%;
     height: 100%;
     background-color: var(--offwhite);
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+  }
+  h1, h2, h3 {
+    font-family: "Anton", sans-serif;
   }
 `
 
 const PageStyles = styled.div`
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
   max-width: 800px;
   margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: column;
   padding: 10px;
-  h1, h2, h3 {
-    font-family: "Anton", sans-serif;
-  }
+  
 `
 
 const ContentStyles = styled.div`
